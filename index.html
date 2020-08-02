@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Slider</title>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/yourcode.js"></script>
+	</head>
+	<body>
+		<div class="swiper-container" id="blur">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="sliderText">
+							<h3>Slide One</h3>
+						</div>
+						<div class="content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<a href="#" onclick="toggle()">Book Now</a>
+						</div>
+					</div>
+    			</div>
+    			<div class="swiper-slide">
+					<div class="card">
+						<div class="sliderText">
+							<h3>Slide Two</h3>
+						</div>
+						<div class="content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<a href="#" onclick="toggle()">Book Now</a>
+						</div>
+					</div>
+    			</div>
+    			<div class="swiper-slide">
+					<div class="card">
+						<div class="sliderText">
+							<h3>Slide Three</h3>
+						</div>
+						<div class="content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<a href="#" onclick="toggle()">Book Now</a>
+						</div>
+					</div>
+    			</div>
+    			<div class="swiper-slide">
+					<div class="card">
+						<div class="sliderText">
+							<h3>Slide Four</h3>
+						</div>
+						<div class="content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<a href="#" onclick="toggle()">Book Now</a>
+						</div>
+					</div>
+    			</div>
+    			<div class="swiper-slide">
+					<div class="card">
+						<div class="sliderText">
+							<h3>Slide Five</h3>
+						</div>
+						<div class="content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<a href="#" onclick="toggle()">Book Now</a>
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container" style="display: flex;justify-content: center;z-index: 2;">
+    		<div id="popup">
+				<h1>Number Of Hours</h1>
+				<div>
+					<h4>30 mins</h4>
+					<input type="checkbox">
+				</div>
+				<div>
+					<h4 style="padding-left: 110px;margin-top: -45px">1 hour</h4>
+				</div>
+				<div>
+					<h4 style="padding-left: 220px;margin-top: -45px">1:30 mins</h4>
+				</div>
+				<div>
+					<h4 style="position: absolute;left: 55px;bottom: 210px">2 hours</h4>
+				</div>
+				<div>
+					<h4 style="position: absolute;left: 160px;bottom: 210px">2:30 mins</h4>
+				</div>
+				<div>
+					<h4 style="position: absolute;left: 270px;bottom: 210px">3 hours</h4>
+				</div>
+				<a href="#" style="text-decoration:none;" onclick="toggle()">Release</a>
+				<hr style="position: relative;height: 2px;border:2px;border-radius: 10px;background: linear-gradient(to left,#EE7752,#E73C7E,#23A6D5,#23D5AB);top: 150px">
+				<button id="modal-btn">Reasons</button>
+				<div id="modal">
+					<h1>What for?</h1>
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<div type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+						</div>
+						<div class="radio-group">
+						<label class="radio">
+							<input type="radio" name="option" value="option1">Option1
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option2">Option2
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option3">Option3
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option4">Option4
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option5">Option5
+							<span></span>
+						</label>
+						<br>
+						<!-- <label class="radio">
+							<input type="radio" name="option" value="option6">Option6
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option7">Option7
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option8">Option8
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" value="option9">Option9
+							<span></span>
+						</label>
+						<br>
+						<label class="radio">
+							<input type="radio" name="option" 
+							value="option10">Option10
+							<span></span>
+						</label>
+						<br> --> 
+					</div>
+				</div>
+			</div>
+		</div>
+  		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  		<script>
+  			var swiper = new Swiper('.swiper-container', {
+  				effect: 'coverflow',
+		      	grabCursor: true,
+		      	centeredSlides: true,
+		      	slidesPerView: 'auto',
+		      	coverflowEffect: {
+		        rotate: 30,
+		        stretch: 0,
+		        depth: 200,
+		        modifier: 1,
+		        slideShadows: true,
+		    },
+		    pagination: {
+		    	el: '.swiper-pagination',
+		    },
+		});
+		</script>
+		<script type="text/javascript">
+			function toggle(){
+				var blur=document.getElementById('blur');
+				blur.classList.toggle('active')
+				var popup=document.getElementById('popup');
+				popup.classList.toggle('active')
+			}
+		</script>
+		<script type="text/javascript">
+			const modal=document.querySelector("#modal");
+			const modalBtn=document.querySelector("#modal-btn");
+			// const ans=document.querySelector("#answer");
+
+			modalBtn.addEventListener("click",()=>{
+				modal.className="open";
+			});
+			// modal.addEventListener("click",(e)=>{
+			// 	if(e.target.id === "yes-btn"){
+			// 		ans.innerText="Yay!";
+			// 	} else if(e.target.id==="no-btn"){
+			// 		ans.innerText="oh! no";
+			// 	}else{
+			// 		return;
+			// 	}
+			// 	modal.className="close";
+			// })
+			function togglePopup(){
+				document.getElementById("#modal").classList.toggle("active");
+			}
+
+
+		</script>
+	</body>
+</html>
